@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager - Interactive To-Do App</title>
+    <meta name="description"
+        content="A simple and interactive task management web app to add, manage, and track your daily tasks with localStorage persistence." />
+    <meta name="author" content="Lovable" />
+    <meta name="keywords" content="task manager, to-do list, productivity, task tracking" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Task Manager - Interactive To-Do App" />
+    <meta property="og:description"
+        content="A simple and interactive task management web app to add, manage, and track your daily tasks." />
+    <meta property="og:type" content="website" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <!-- HEADER SECTION -->
+
+    <header class="header">
+        <div class="header-content">
+            <!-- Task Icon SVG -->
+
+            <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <rect x="3" y="5" width="6" height="6" rx="1" />
+                <path d="m3 17 2 2 4-4" />
+                <path d="M13 6h8" />
+                <path d="M13 12h8" />
+                <path d="M13 18h8" />
+            </svg>
+            <h1 class="header-title">Task Manager</h1>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+        <!-- Task Input Section -->
+        <section class="input-section" aria-label="Add new task">
+            <div class="input-container">
+                <input type="text" id="taskInput" class="task-input" placeholder="Add a new task..."
+                    aria-label="Task input" />
+                <button id="addBtn" class="add-btn" aria-label="Add task" disabled>
+                    <!-- Plus Icon SVG -->
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14" />
+                        <path d="M12 5v14" />
+                    </svg>
+                    <span class="btn-text">Add</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Task Counter Section -->
+        <section class="counter-section" aria-label="Task statistics">
+            <div class="counter-card">
+                <p class="counter-value counter-total" id="totalCount">0</p>
+                <p class="counter-label">Total</p>
+            </div>
+            <div class="counter-card">
+                <p class="counter-value counter-completed" id="completedCount">0</p>
+                <p class="counter-label">Completed</p>
+            </div>
+            <div class="counter-card">
+                <p class="counter-value counter-pending" id="pendingCount">0</p>
+                <p class="counter-label">Pending</p>
+            </div>
+        </section>
+
+        <!-- Task List Section -->
+        <section class="task-section" aria-label="Task list">
+            <div id="emptyState" class="empty-state">
+                <svg class="empty-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <rect x="3" y="5" width="6" height="6" rx="1" />
+                    <path d="m3 17 2 2 4-4" />
+                    <path d="M13 6h8" />
+                    <path d="M13 12h8" />
+                    <path d="M13 18h8" />
+                </svg>
+                <p class="empty-title">No tasks yet!</p>
+                <p class="empty-subtitle">Add your first task above to get started.</p>
+            </div>
+
+            <!-- Task List (hidden when empty) -->
+            <ul id="taskList" class="task-list" role="list" aria-label="Tasks"></ul>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Interactive To-Do & Task Manager</p>
+            <p class="footer-subtitle">Built with HTML, CSS & JavaScript • Data saved in localStorage</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
