@@ -5,38 +5,6 @@
   padding: 0;
 }
 
-:root {
-  /* Color Palette */
-  --primary: hsl(222, 78%, 48%);
-  --primary-hover: hsl(220, 90%, 50%);
-  --success: hsl(142, 76%, 36%);
-  --warning: hsl(38, 92%, 50%);
-  --danger: hsl(0, 84%, 60%);
-  --danger-bg: hsl(0, 84%, 60%, 0.1);
-  
-  /* Neutral Colors */
-  --bg: hsl(220, 14%, 96%);
-  --bg-white: hsl(0, 0%, 100%);
-  --text: hsl(210, 15%, 22%);
-  /* --text-muted: hsl(220, 9%, 46%); */
-  --text-muted: hsl(215, 10%, 52%);
-
-
-  --border: hsl(220, 13%, 85%);
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  
-  /* Spacing */
-  --radius: 0.75rem;
-  --radius-lg: 1rem;
-  
-  /* Transitions */
-  --transition: all 0.2s ease;
-}
-
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -412,35 +380,4 @@ body {
    /* UTILITY CLASSES */
 .hidden {
   display: none !important;
-}
-
-   /* ANIMATIONS */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.task-item {
-  animation: fadeIn 0.2s ease-out;
-}
-
-   /* ACCESSIBILITY */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Focus visible for keyboard navigation */
-:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
 }
